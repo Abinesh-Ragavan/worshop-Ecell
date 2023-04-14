@@ -128,48 +128,135 @@ footer a {
 
 /*navbar*/
 
-nav {
-    font-family: Ubuntu;
-    font-weight: bolder;
-    font-size: 14px;
-    box-shadow: 10px 0px 1px;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+*{
+    margin: 0px;
+}
+.navbars{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
-.container-md {
-    max-width: 1204px;
+.buttonsresp{
+    display: none;
 }
-
-.btn-primary {
-    background-color: rgb(0, 82, 255);
-    font-size: 14px;
-    padding: 10px 12px;
-}
-
-/*When no hamburger*/
-@media (min-width: 992px) {
-    .nav-link:hover {
-        text-decoration: underline rgb(0, 82, 255) 4px;
-        text-underline-offset: 28px;
+.navbarslinks a {
+    color: black;
     }
-}
-
-/* When hamburger */
-@media (min-width: 576px) and (max-width: 992px) {
-    .collapse {
-        font-size: 16px;
+    
+/* logos */
+.logos img{
+    height: 20px;
     }
-}
-
-/* Un-earthly small devices */
-@media (max-width: 575px) {
-    .collapse {
-        font-size: 16px;
+    
+    /* NAVBAR MENU */
+    .menus{
+    display: flex;
+   
+    font-size: 18px;
+    list-style-type: none;
+    
+    }
+    
+    .menus li:hover {
+    background-color: blue;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    }
+    
+    .menus li {
+    padding: 5px 14px;
+    }
+    .menus li a{
+        text-decoration: none;
+    }
+    .buttons{
+        display: flex;
+        align-items: center;
+    }
+    .buttons a{
+        padding-right: 10px;
+        cursor: pointer;
+    }
+    .buttons a:hover{
+        color: blue;
+    }
+    .but{
+        background-color: blue;
+        color: white;
+        border-color: white;
+        height: 30px;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 100px;
+        cursor: pointer;
     }
 
-    .collapse a.d-lg-none {
-        width: 90%;
-    }
-}
+    input[type=checkbox] {
+        display: none;
+        } 
+        
+        /* HAMBURGER MENU */
+        .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+        }
+        
+        /* APPLYING MEDIA QUERIES */
+        @media (max-width: 768px) {
+        .menus {
+        display:none;
+        position: absolute;
+        background-color:white;
+        
+        right: 0;
+        left: 0;
+        top: 60px;
+        text-align: center;
+        padding: 16px 0;
+        
+        }
+        
+        .navbars{
+            justify-content: space-between;
+        }
+        
+        .menus li + li {
+        margin-top: 12px;
+        }
+        
+        input[type=checkbox]:checked ~ .menus {
+        display: block;
+        }
+        
+        .hamburger {
+        display: block;
+        }
+        .buttons {
+            display: none;
+        }
+        .buttonsresp{
+            display: inline;
+        }
+        .navbarslinks{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .but{
+            margin-right: 10px;
+        }
+        }
+
 
 /*//navbar*/
 
